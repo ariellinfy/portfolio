@@ -1903,7 +1903,7 @@ header.major {
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
   border-width: 0.25rem;
-  padding: 3.6em 0;
+  padding: 3.6em 1em;
 }
 
 /* Form */
@@ -3117,14 +3117,15 @@ input[type="button"]:disabled,
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
-  display: block;
+  display: flex;
   position: relative;
   border: none;
   bottom: -8em;
   text-decoration: none;
-  width: fit-content;
+  width: 2em;
   margin: auto;
   font-size: 1.1em;
+  justify-content: center;
 }
 
 .fas {
@@ -3665,14 +3666,5 @@ input[type="button"]:disabled,
   ul.feature-icons li {
     display: block;
     width: 100%;
-  }
-
-  /* Button */
-
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
-  .button {
-    padding: 0;
   }
 }

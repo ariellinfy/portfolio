@@ -972,13 +972,4 @@ input[type="button"]:disabled,
     display: block;
     width: 100%;
   }
-
-  /* Button */
-
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
-  .button {
-    padding: 0;
-  }
 }
