@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 
-export const Project = () => {
+export const ProjectWideCard = () => {
   return (
     <Card className="py-4">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">

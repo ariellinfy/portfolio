@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="flex flex-col gap-1 h-3/5 md:h-2/3 w-full items-center justify-center">
         <p className="text-small text-default-400">
           © {new Date().getFullYear()}{" "}
-          <span className="text-warning-500 dark:text-warning-300 font-medium">
+          <span className="text-primary-500 dark:text-primary-300 font-medium">
             {author}
           </span>
           . All rights reserved.

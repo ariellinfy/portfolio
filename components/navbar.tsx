@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/navbar";
 import Link from "next/link";
 
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "./theme-switch";
 import { GithubIcon, LinkedInIcon, LogoLight } from "@/components/icons";
 import { siteConfig } from "@/config/sites";
 
