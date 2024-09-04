@@ -1,4 +1,9 @@
+import { Spinner } from "@nextui-org/spinner";
+
 export default function Loading() {
-    // Or a custom loading skeleton component
-    return <p>Loading...</p>
-  }
+  return (
+    <div className="min-h-screen w-full flex flex-col gap-5 justify-center items-center font-medium text-large">
+      <Spinner label="Loading..." color="primary" size="lg" />
+    </div>
+  );
+}

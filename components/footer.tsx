@@ -1,10 +1,16 @@
 import Link from "next/link";
 
-export const Footer = () => {
+type FooterProps = {
+  position: string;
+};
+
+export const Footer = ({ position }: FooterProps) => {
   const author = "Ariel Lin";
 
   return (
-    <div className="bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black static">
+    <div
+      className={`bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black ${position}`}
+    >
       <div className="flex flex-col gap-1 h-3/5 md:h-2/3 w-full items-center justify-center">
         <p className="text-small text-default-400">
           © {new Date().getFullYear()}{" "}

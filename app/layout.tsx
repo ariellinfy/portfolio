@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/sites";
 import "../styles/globals.css";
 
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 import { Providers } from "./providers";
 import {
   roboto,
@@ -36,11 +34,9 @@ export default function RootLayout({
       lang="en"
       className={`${roboto.variable} ${roboto_mono.variable} antialiased`}
     >
-      <body className={maven_pro.className}>
+      <body className={`${maven_pro.className} min-h-screen`}>
         <Providers>
-          <Navbar />
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>

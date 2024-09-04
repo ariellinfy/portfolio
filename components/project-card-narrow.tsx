@@ -39,12 +39,11 @@ export const ProjectNarrowCard = ({
   repo,
   image,
   tags,
-  timeframe
+  timeframe,
 }: ProjectNarrowCardProps) => {
   return (
     <Card className="w-[420px] min-w-[300px] gap-2 p-3" isPressable isHoverable>
       <CardHeader className="flex-col items-end text-small p-0">
-        
         <p className="text-tiny font-medium text-primary-600">{type}</p>
         <p>{timeframe}</p>
       </CardHeader>
