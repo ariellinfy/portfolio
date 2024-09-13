@@ -66,7 +66,7 @@ export const projects = [
   {
     title: "Next Smart Brain - Face Detection App",
     description:
-      "A face detection app built with Next.js, NextAuth.js, and PostgreSQL that allows users to log in, submit images, and detect faces with real-time bounding box results and confidence scores.",
+      "A face detection app built with Next.js, Auth.js, and PostgreSQL that allows users to log in, submit images, and detect faces with real-time bounding box results and confidence scores.",
     demo: { link: "https://smartbrain-next.vercel.app", active: true },
     repo: { link: "https://github.com/ariellinfy/smartbrain", active: true },
     image: "/projects/03_face_detection.png",
