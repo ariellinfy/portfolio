@@ -1,4 +1,4 @@
-import { Roboto, Roboto_Mono, Cairo, Exo_2, Josefin_Sans, Maven_Pro, Ubuntu  } from "next/font/google";
+import { Roboto, Roboto_Mono, Cairo, Exo_2, Josefin_Sans, Maven_Pro, Ubuntu } from "next/font/google";
 
 export const roboto = Roboto({
     weight: ["400", "500", "700"],

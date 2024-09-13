@@ -64,6 +64,7 @@ export const Projects = () => {
             demo={project.demo}
             repo={project.repo}
             image={project.image}
+            status={project.status}
             tags={project.tags}
             timeframe={project.timeframe}
           />

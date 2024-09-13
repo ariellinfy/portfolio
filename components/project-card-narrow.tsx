@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { Link } from "@nextui-org/link";
 
-const colorMap: { [key: string]: any } = {
+const tagColorMap: { [key: string]: any } = {
   languages: "danger",
   frontend: "warning",
   backend: "secondary",
@@ -15,18 +15,31 @@ const colorMap: { [key: string]: any } = {
   deployment: "default",
 };
 
+const statusColorMap: { [key: string]: any } = {
+  "Deployed": "success",
+  "In Progress": "danger",
+  "Not Started": "default",
+  "On Hold": "primary",
+};
+
 type Tag = {
   category: string;
   items: string[];
+};
+
+type LinkStatus = {
+  link: string;
+  active: boolean;
 };
 
 type ProjectNarrowCardProps = {
   title: string;
   description: string;
   type: string;
-  demo?: string;
-  repo?: string;
+  demo?: LinkStatus;
+  repo?: LinkStatus;
   image: string;
+  status: string;
   tags: Tag[];
   timeframe: string;
 };
@@ -38,14 +51,18 @@ export const ProjectNarrowCard = ({
   demo,
   repo,
   image,
+  status,
   tags,
   timeframe,
 }: ProjectNarrowCardProps) => {
   return (
     <Card className="w-[420px] min-w-[300px] gap-2 p-3" isPressable isHoverable>
-      <CardHeader className="flex-col items-end text-small p-0">
-        <p className="text-tiny font-medium text-primary-600">{type}</p>
-        <p>{timeframe}</p>
+      <CardHeader className="justify-between items-start text-small p-0">
+        <Chip color={statusColorMap[status]} variant="dot" size="sm">{status}</Chip>
+        <div className="flex flex-col items-end text-small p-0">
+          <p className="text-tiny font-medium text-primary-600">{type}</p>
+          <p>{timeframe}</p>
+        </div>
       </CardHeader>
       <CardBody className="p-0 gap-2">
         <Image
@@ -63,7 +80,7 @@ export const ProjectNarrowCard = ({
                 ? items.map((item) => (
                     <Chip
                       key={item}
-                      color={colorMap[category]}
+                      color={tagColorMap[category]}
                       variant="flat"
                       size="sm"
                     >
@@ -77,21 +94,23 @@ export const ProjectNarrowCard = ({
       </CardBody>
       <CardFooter className="gap-2 p-0 pt-3">
         <Button
-          href={repo}
+          href={repo?.link}
           as={Link}
           isExternal
           className="w-full"
           variant="flat"
           color="primary"
+          isDisabled={!repo?.active}
         >
           Source Code
         </Button>
         <Button
-          href={demo}
+          href={demo?.link}
           as={Link}
           isExternal
           className="w-full"
           color="primary"
+          isDisabled={!demo?.active}
         >
           Demo
         </Button>
