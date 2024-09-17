@@ -25,6 +25,6 @@ export const siteConfig = {
   ],
   links: {
     github: "https://github.com/ariellinfy",
-    linkedin: "https://www.linkedin.com/in/ariellinfy/"
+    linkedin: "https://www.linkedin.com/in/ariellinfy/",
   },
 };

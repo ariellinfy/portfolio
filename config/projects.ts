@@ -1,5 +1,172 @@
-export const projects = [
+import { Project } from "@/types";
+
+export const projects: Project[] = [
   {
+    visible: true,
+    title: "Liteline",
+    description:
+      "LiteLine is a lightweight chat room web application that enables users to create or join rooms for group conversations, utilizing real-time messaging through web sockets and robust data handling with PostgreSQL.",
+    demo: {
+      link: "https://liteline-1.onrender.com/",
+      active: true,
+    },
+    repo: {
+      link: "https://github.com/kayrux/liteline",
+      active: true,
+    },
+    image: "/projects/24_liteline.gif",
+    status: "Active",
+    type: "Full Stack Web Application | Distributed Systems",
+    tags: [
+      { category: "languages", items: ["JavaScript"] },
+      {
+        category: "frontend",
+        items: ["React", "Redux", "Material-UI", "Tailwind CSS"],
+      },
+      {
+        category: "backend",
+        items: ["Express", "socket.io", "http-proxy-middleware"],
+      },
+      { category: "database", items: ["Postgres", "Azure"] },
+      { category: "versionControl", items: ["Git"] },
+      { category: "devops", items: [] },
+      { category: "testing", items: [] },
+      { category: "deployment", items: ["Render"] },
+    ],
+    timeframe: "Jan 2024 - Apr 2024",
+  },
+  {
+    visible: true,
+    title: "PostcARds",
+    description:
+      "Bringing postcards to life using augmented reality, allows users to personalize and share memorable experiences in a whole new way!",
+    demo: {
+      link: "https://ar-postcards.glitch.me/",
+      active: true,
+    },
+    repo: {
+      link: "https://ariellinfy.wixsite.com/my-site/projects/ar-postcards",
+      active: true,
+    },
+    image: "/projects/23_ar_postcards.png",
+    status: "Active",
+    type: "HCI | VR Design",
+    tags: [
+      { category: "languages", items: ["JavaScript "] },
+      {
+        category: "frontend",
+        items: ["HTML", "CSS", "A-Frame"],
+      },
+      {
+        category: "backend",
+        items: ["socket.io", "Teachable Machine"],
+      },
+      { category: "database", items: [] },
+      { category: "versionControl", items: [] },
+      { category: "devops", items: [] },
+      { category: "testing", items: [] },
+      { category: "deployment", items: ["Glitch"] },
+    ],
+    timeframe: "Dec 2023",
+  },
+  {
+    visible: true,
+    title: "Annoying Alarm",
+    description:
+      "Leveraging Arduino to solve the everyday struggle of waking up - a dynamic alarm that not only rings but actually runs away from the user, compelling them to get out of bed to turn it off, ensuring a prompt and energetic start to the day!",
+    demo: {
+      link: "https://www.youtube.com/watch?v=K7domX6iPvc&t=3s&ab_channel=AlokikSeoh",
+      active: true,
+    },
+    repo: {
+      link: "https://ariellinfy.wixsite.com/my-site/projects/annoying-alarm",
+      active: true,
+    },
+    image: "/projects/23_annoying_alarm.png",
+    status: "Active",
+    type: "HCI | Hardware Design | Arduino",
+    tags: [
+      { category: "languages", items: ["C"] },
+      {
+        category: "frontend",
+        items: [],
+      },
+      {
+        category: "backend",
+        items: [],
+      },
+      { category: "database", items: [] },
+      { category: "versionControl", items: [] },
+      { category: "devops", items: [] },
+      { category: "testing", items: [] },
+      { category: "deployment", items: ["Arduino", "Tinkercard"] },
+    ],
+    timeframe: "Nov 2023",
+  },
+  {
+    visible: true,
+    title: "Phone Unlocks",
+    description:
+      "An exploration of various phone lock screens, featuring multi-touch and sensor-based input methods.",
+    demo: { link: "https://lockscreen-hopscotch.glitch.me/", active: true },
+    repo: {
+      link: "https://ariellinfy.wixsite.com/my-site/projects/phone-unlocks",
+      active: true,
+    },
+    image: "/projects/23_phone_unlocks.png",
+    status: "Active",
+    type: "HCI | Mobile Design | Sensor-based Interaction",
+    tags: [
+      { category: "languages", items: ["JavaScript"] },
+      {
+        category: "frontend",
+        items: ["HTML", "CSS"],
+      },
+      {
+        category: "backend",
+        items: ["Hugging Face", "OpenAI", "RESTful APIs"],
+      },
+      { category: "database", items: [] },
+      { category: "versionControl", items: [] },
+      { category: "devops", items: [] },
+      { category: "testing", items: [] },
+      { category: "deployment", items: ["Glitch"] },
+    ],
+    timeframe: "Oct 2023",
+  },
+  {
+    visible: true,
+    title: "Doodle Tales",
+    description:
+      "A delightful kids' app where children can unleash their imagination by drawing sketches and selecting prompts, while our AI system brings their creations to life with vibrant images and captivating stories.",
+    demo: { link: "https://doodle-tales.glitch.me/", active: true },
+    repo: {
+      link: "https://ariellinfy.wixsite.com/my-site/projects/doodle-tales",
+      active: true,
+    },
+    image: "/projects/23_doodle_tales.png",
+    status: "Active",
+    type: "HCI | Web Application",
+    tags: [
+      { category: "languages", items: ["JavaScript"] },
+      {
+        category: "frontend",
+        items: ["HTML", "CSS"],
+      },
+      {
+        category: "backend",
+        items: ["Hugging Face", "OpenAI", "RESTful APIs"],
+      },
+      { category: "database", items: [] },
+      { category: "versionControl", items: [] },
+      { category: "devops", items: [] },
+      { category: "testing", items: [] },
+      { category: "deployment", items: ["Glitch"] },
+    ],
+    timeframe: "Sep 2023",
+  },
+  {
+    visible: true,
     title: "Vegetarian With You - Restaurant Review Website",
     description:
       "Vegetarian With You is a restaurant review website that allows users to discover and share amazing vegan restaurants, visit experiences and opinions. All authenticated users are welcome to enhance public restaurants and their own reviews as well as upgrade user profile.",
@@ -8,11 +175,11 @@ export const projects = [
       link: "https://github.com/ariellinfy/vegetarian-with-you",
       active: false,
     },
-    image: "/projects/01_vegetarian_with_you.png",
-    status: "On Hold",
+    image: "/projects/21_vegetarian_with_you.png",
+    status: "Pending Upgrade",
     type: "Full Stack Web Application",
     tags: [
-      { category: "lanuages", items: [] },
+      { category: "languages", items: ["JavaScript"] },
       {
         category: "frontend",
         items: [
@@ -37,6 +204,7 @@ export const projects = [
     timeframe: "Mar 2021 - Jun 2021",
   },
   {
+    visible: true,
     title: "Crown Clothing - E-Commerce Website",
     description:
       "A classical e-commerce website allows users to shop around items. The app is integrated with Stripe API to handle test credit card checkout payment, also incorporated with Firebase to handle user authentication and storage.",
@@ -45,11 +213,11 @@ export const projects = [
       link: "https://github.com/ariellinfy/crown-clothing",
       active: true,
     },
-    image: "/projects/02_crown_clothing.png",
-    status: "Deployed",
+    image: "/projects/24_crown_clothing.png",
+    status: "Active",
     type: "Full Stack Web Application",
     tags: [
-      { category: "languages", items: [] },
+      { category: "languages", items: ["JavaScript"] },
       {
         category: "frontend",
         items: ["React", "Redux", "Redux Sagas", "Sass", "Styled-components"],
@@ -64,17 +232,18 @@ export const projects = [
     timeframe: "Dec 2020 & Jan 2024",
   },
   {
+    visible: true,
     title: "Next Smart Brain - Face Detection App",
     description:
       "A face detection app built with Next.js, Auth.js, and PostgreSQL that allows users to log in, submit images, and detect faces with real-time bounding box results and confidence scores.",
     demo: { link: "https://smartbrain-next.vercel.app", active: true },
     repo: { link: "https://github.com/ariellinfy/smartbrain", active: true },
-    image: "/projects/03_face_detection.png",
+    image: "/projects/24_face_detection.png",
     type: "Full Stack Web Application",
-    status: "Deployed",
+    status: "Active",
     tags: [
-      { category: "languages", items: [] },
-      { category: "frontend", items: ["Next.js", "Typescript", "tailwindcss"] },
+      { category: "languages", items: ["TypeScript"] },
+      { category: "frontend", items: ["Next.js", "tailwindcss"] },
       { category: "backend", items: ["Auth.js", "RapidAPI", "bcrypt", "zod"] },
       { category: "database", items: ["PostgresSQL"] },
       { category: "versionControl", items: ["Git"] },
@@ -85,16 +254,17 @@ export const projects = [
     timeframe: "Sep 2024",
   },
   {
+    visible: true,
     title: "Pokémon Search App",
     description:
       "A front-end project that fetches Pokémon data and images from free APIs. The app is responsive, and users can use the search bar to filter out the target Pokémon.",
     demo: { link: "https://ariellinfy.github.io/pokemon-app/", active: true },
     repo: { link: "https://github.com/ariellinfy/pokemon-app", active: true },
-    image: "/projects/04_pokemon_search.png",
-    status: "Deployed",
+    image: "/projects/20_pokemon_search.png",
+    status: "Pending Upgrade",
     type: "Front-End Web Application",
     tags: [
-      { category: "languages", items: [] },
+      { category: "languages", items: ["JavaScript"] },
       { category: "frontend", items: ["React", "Pokémon API"] },
       { category: "backend", items: [] },
       { category: "database", items: [] },
@@ -106,6 +276,7 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Background Generator",
     description:
       "An interactive background generator that allows users to test and see live changes of color gradient and tilted direction. If done, simply click on a button to copy the CSS code to the clipboard.",
@@ -117,8 +288,8 @@ export const projects = [
       link: "https://github.com/ariellinfy/background-generator",
       active: true,
     },
-    image: "/projects/05_background_generator.png",
-    status: "Deployed",
+    image: "/projects/20_background_generator.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "HTML5", "CSS3"] },
@@ -133,6 +304,7 @@ export const projects = [
     timeframe: "Oct 2020",
   },
   {
+    visible: false,
     title: "Quote Generator",
     description:
       "A responsive quote generator app that randomly generates motivational quotes. The app makes an asynchronous fetch request to a free REST API to obtain quote data. The CORS (Cross-Origin Resource Sharing) problem is solved using a proxy API.",
@@ -144,8 +316,8 @@ export const projects = [
       link: "https://github.com/ariellinfy/quote-generator",
       active: true,
     },
-    image: "/projects/06_quote_generator.png",
-    status: "Deployed",
+    image: "/projects/20_quote_generator.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "API", "CSS3"] },
@@ -160,13 +332,14 @@ export const projects = [
     timeframe: "Nov 2020",
   },
   {
+    visible: false,
     title: "Joke Teller",
     description:
       "A joke teller web app that functions like Siri and Cortana. It tells a joke out loud when the user makes a request. The app is integrated with a joke API to acquire a random joke and pass it to a text-to-speech API to make it sound.",
     demo: { link: "https://ariellinfy.github.io/joke-teller/", active: true },
     repo: { link: "https://github.com/ariellinfy/joke-teller", active: true },
-    image: "/projects/07_joke_teller.png",
-    status: "Deployed",
+    image: "/projects/20_joke_teller.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "API"] },
@@ -181,6 +354,7 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Countdown App",
     description:
       "A countdown web app allows users to enter and select a desired countdown title and date. The app stores countdown information in local storage, so users are free to refresh page or close the browser without losing data.",
@@ -192,8 +366,8 @@ export const projects = [
       link: "https://github.com/ariellinfy/custom-countdown",
       active: true,
     },
-    image: "/projects/08_countdown.png",
-    status: "Deployed",
+    image: "/projects/20_countdown.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "HTML5", "CSS3"] },
@@ -208,6 +382,7 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Spock Rock Game",
     description:
       "A game of rock paper scissor lizard spock. Users are competing with the computer by selecting one of the five weapons. There are 3 possible results at the end of each round: you won, it’s a tie, and you lost. The app also incorporates the third-party confetti module.",
@@ -219,8 +394,8 @@ export const projects = [
       link: "https://github.com/ariellinfy/spock-rock-game",
       active: true,
     },
-    image: "/projects/09_spock_rock_game.png",
-    status: "Deployed",
+    image: "/projects/20_spock_rock_game.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "Modules", "HTML5"] },
@@ -235,6 +410,7 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Math Sprint Game",
     description:
       "A web-based math game allows testing out user's mental arithmetic ability of the math multiplication table. The app randomly generates the user-selected amount of math equations (can either correct or incorrect), utilizes time events and number of incorrect answers to calculate scores, best scores are stored in local storage.",
@@ -246,8 +422,8 @@ export const projects = [
       link: "https://github.com/ariellinfy/math-sprint-game",
       active: true,
     },
-    image: "/projects/10_math_sprint_game.png",
-    status: "Deployed",
+    image: "/projects/20_math_sprint_game.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "DOM", "Local Storage"] },
@@ -262,13 +438,14 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Kanban Board",
     description:
       "A web-based Kanban board uses drag and drop API to allow users to add, edit, move, delete items/tasks between columns. Every update in the app is stored in local storage.",
     demo: { link: "https://ariellinfy.github.io/drag-and-drop/", active: true },
     repo: { link: "https://github.com/ariellinfy/drag-and-drop", active: true },
-    image: "/projects/11_kanban.png",
-    status: "Deployed",
+    image: "/projects/20_kanban.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "HTML5", "DOM"] },
@@ -283,13 +460,14 @@ export const projects = [
     timeframe: "Dec 2020",
   },
   {
+    visible: false,
     title: "Paint",
     description:
       "A web-based app uses Canvas HTML elements to allow users to create a basic version of Microsoft Paint. It supports several storage options: save to, load from, and clear local storage, as well as save as an image file.",
     demo: { link: "https://ariellinfy.github.io/paint-clone/", active: true },
     repo: { link: "https://github.com/ariellinfy/paint-clone", active: true },
-    image: "/projects/12_paint.png",
-    status: "Deployed",
+    image: "/projects/21_paint.png",
+    status: "Active",
     type: "Web Application",
     tags: [
       { category: "languages", items: ["JavaScript", "DOM", "HTML5"] },

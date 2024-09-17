@@ -3,7 +3,7 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const LogoDark: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 32,
   width,
   height,
   ...props
@@ -40,7 +40,7 @@ export const LogoDark: React.FC<IconSvgProps> = ({
 );
 
 export const LogoLight: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 28,
   width,
   height,
   ...props
@@ -77,7 +77,7 @@ export const LogoLight: React.FC<IconSvgProps> = ({
 );
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props
@@ -100,7 +100,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
 };
 
 export const LinkedInIcon: React.FC<IconSvgProps> = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props
@@ -123,7 +123,7 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
 };
 
 export const MoonFilledIcon = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props
@@ -145,7 +145,7 @@ export const MoonFilledIcon = ({
 );
 
 export const SunFilledIcon = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props
@@ -167,7 +167,7 @@ export const SunFilledIcon = ({
 );
 
 export const SearchIcon = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props

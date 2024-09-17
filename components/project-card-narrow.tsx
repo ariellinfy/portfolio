@@ -3,6 +3,7 @@ import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { Link } from "@nextui-org/link";
+import { Project } from "@/types";
 
 const tagColorMap: { [key: string]: any } = {
   languages: "danger",
@@ -16,32 +17,18 @@ const tagColorMap: { [key: string]: any } = {
 };
 
 const statusColorMap: { [key: string]: any } = {
-  "Deployed": "success",
-  "In Progress": "danger",
-  "Not Started": "default",
+  Completed: "success",
+  Active: "success",
+  Launched: "success",
+  Planning: "danger",
+  "In Development": "danger",
+  Maintenance: "danger",
+  "In Review": "danger",
   "On Hold": "primary",
-};
-
-type Tag = {
-  category: string;
-  items: string[];
-};
-
-type LinkStatus = {
-  link: string;
-  active: boolean;
-};
-
-type ProjectNarrowCardProps = {
-  title: string;
-  description: string;
-  type: string;
-  demo?: LinkStatus;
-  repo?: LinkStatus;
-  image: string;
-  status: string;
-  tags: Tag[];
-  timeframe: string;
+  "Pending Upgrade": "primary",
+  "Not Started": "default",
+  Archived: "default",
+  Retired: "default",
 };
 
 export const ProjectNarrowCard = ({
@@ -54,13 +41,18 @@ export const ProjectNarrowCard = ({
   status,
   tags,
   timeframe,
-}: ProjectNarrowCardProps) => {
+  visible,
+}: Project) => {
+  if (!visible) return null;
+
   return (
     <Card className="w-[420px] min-w-[300px] gap-2 p-3" isPressable isHoverable>
-      <CardHeader className="justify-between items-start text-small p-0">
-        <Chip color={statusColorMap[status]} variant="dot" size="sm">{status}</Chip>
+      <CardHeader className="justify-between items-start text-small p-0 gap-2">
+        <Chip color={statusColorMap[status]} variant="dot" size="sm">
+          {status}
+        </Chip>
         <div className="flex flex-col items-end text-small p-0">
-          <p className="text-tiny font-medium text-primary-600">{type}</p>
+          <p className="text-tiny font-medium text-primary-600 text-right">{type}</p>
           <p>{timeframe}</p>
         </div>
       </CardHeader>

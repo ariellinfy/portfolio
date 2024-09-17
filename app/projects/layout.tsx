@@ -10,7 +10,7 @@ export default function RootLayout({
     <>
       <Navbar />
       {children}
-      <Footer position="static" />
+      <Footer />
     </>
   );
 }

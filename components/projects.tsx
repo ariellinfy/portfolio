@@ -5,19 +5,13 @@ import { Input } from "@nextui-org/input";
 import { ProjectNarrowCard } from "@/components/project-card-narrow";
 import { projects } from "@/config/projects";
 import { SearchIcon } from "@/components/icons";
+import { sortProjectsByTimeframe, filterProjects } from "@/lib/utils";
 
 export const Projects = () => {
   const [searchText, setSearchText] = useState("");
 
-  const filteredProjects = projects.filter(
-    (project) =>
-      project.title.toLowerCase().includes(searchText.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchText.toLowerCase()) ||
-      project.type.toLowerCase().includes(searchText.toLowerCase()) ||
-      project.timeframe.toLowerCase().includes(searchText.toLowerCase()) ||
-      project.tags.some(tagCategory =>
-        tagCategory.items.some(tag => tag.toLowerCase().includes(searchText.toLowerCase())))
-  );
+  const filteredProjects = filterProjects(projects, searchText);
+  const sortedProjects = sortProjectsByTimeframe(filteredProjects);
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24 gap-12">
@@ -55,7 +49,7 @@ export const Projects = () => {
         />
       </div>
       <div className="z-10 w-full items-start justify-center flex flex-wrap gap-5">
-        {filteredProjects.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <ProjectNarrowCard
             key={index}
             title={project.title}
@@ -67,6 +61,7 @@ export const Projects = () => {
             status={project.status}
             tags={project.tags}
             timeframe={project.timeframe}
+            visible={project.visible}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { experiences } from "@/config/experiences";
 import { educations } from "@/config/education";
-import { ExperienceCard } from "@/components/experience-card";
+import { EntryCard } from "@/components/entry-card";
 
 export default function PageAbout() {
   return (
@@ -13,7 +13,7 @@ export default function PageAbout() {
 
         <div className="flex flex-col gap-5 w-full">
           {experiences.map((e, index) => (
-            <ExperienceCard
+            <EntryCard
               key={index}
               title={e.title}
               company={e.company}
@@ -29,7 +29,7 @@ export default function PageAbout() {
 
         <div className="flex flex-col gap-5 w-full">
           {educations.map((e, index) => (
-            <ExperienceCard
+            <EntryCard
               key={index}
               title={e.title}
               company={e.company}
