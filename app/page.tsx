@@ -16,13 +16,13 @@ export default function Home() {
     <main className="flex justify-center items-center h-screen px-10 sm:px-24 md:py-32">
       <Card
         isBlurred
-        className="border-none bg-background/60 dark:bg-default-100/50 min-w-[300px] w-full max-w-[900px] min-h-[475px]"
+        className="border-none bg-background/60 dark:bg-default-100/50 min-w-[300px] w-full max-w-[950px] min-h-[475px]"
       >
         <CardBody className="flex flex-row gap-8 items-center justify-center lg:justify-between p-10 md:px-15 lg:p-20 flex-wrap overflow-x-hidden">
           <div className="flex flex-col gap-10">
             <div className="flex w-full items-center justify-center">
               <h2 className={`text-5xl font-medium ${josefin_sans.className}`}>
-                Hi, I'm Ariel Lin
+              👋 Hi, I'm Ariel Lin
               </h2>
             </div>
             <div className="flex flex-col gap-7">
