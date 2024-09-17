@@ -6,6 +6,7 @@ import { Link } from "@nextui-org/link";
 import { GithubIcon, LinkedInIcon } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/sites";
+import { josefin_sans } from "@/config/fonts";
 
 export default function Home() {
   const linkStyles =
@@ -19,8 +20,10 @@ export default function Home() {
       >
         <CardBody className="flex flex-row gap-8 items-center justify-center lg:justify-between p-10 md:px-15 lg:p-20 flex-wrap overflow-x-hidden">
           <div className="flex flex-col gap-10">
-            <div className="flex w-full items-center justify-center ">
-              <h2 className="text-5xl font-medium">Hi, I'm Ariel Lin</h2>
+            <div className="flex w-full items-center justify-center">
+              <h2 className={`text-5xl font-medium ${josefin_sans.className}`}>
+                Hi, I'm Ariel Lin
+              </h2>
             </div>
             <div className="flex flex-col gap-7">
               <div className="flex gap-5 w-full">

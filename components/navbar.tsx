@@ -12,13 +12,14 @@ import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
 import { GithubIcon, LinkedInIcon, LogoLight } from "@/components/icons";
 import { siteConfig } from "@/config/sites";
+import { josefin_sans } from "@/config/fonts";
 
 export const Navbar = () => {
   const linkStyles =
     "text-default-500 transition-opacity hover:opacity-80 hover:font-bold cursor-pointer dark:hover:text-zinc-300 dark:hover:opacity-90";
 
   return (
-    <NextUINavbar maxWidth="xl">
+    <NextUINavbar maxWidth="xl" className={`${josefin_sans.className} px-6 lg:px-10`}>
       <NavbarContent className="basis-1/5 sm:basis-full gap-5" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <Link className="flex justify-start items-center gap-1" href="/">

@@ -2,7 +2,14 @@ import { Entry } from "@/types";
 
 export const experiences: Entry[] = [
   {
-    title: "Tax Analyst",
+    title: "Software Developer",
+    company: "Freelancer",
+    location: "Calgary, AB",
+    timeframe: "Jul 2024 - Present",
+    description: ["Coming soon..."],
+  },
+  {
+    title: "Tax Technology & Transformation Analyst",
     company: "Nutrien Ltd.",
     location: "Calgary, AB",
     timeframe: "Mar 2024 - Present",

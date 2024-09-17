@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased">
-      <body className={`${josefin_sans.className} min-h-screen`}>
+      <body className={`${maven_pro.className} min-h-screen`}>
         <Providers>{children}</Providers>
       </body>
     </html>

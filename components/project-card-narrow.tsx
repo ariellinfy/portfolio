@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import { Link } from "@nextui-org/link";
 import { Project } from "@/types";
+import { josefin_sans } from "@/config/fonts";
 
 const tagColorMap: { [key: string]: any } = {
   languages: "danger",
@@ -63,10 +64,10 @@ export const ProjectNarrowCard = ({
           src={image}
           isZoomed
         />
-        <div className="flex flex-col gap-2 px-2">
-          <h4 className="font-medium text-large">{title}</h4>
+        <div className="flex flex-col gap-1 px-2">
+          <h4 className={`pt-2 font-medium text-large ${josefin_sans.className}`}>{title}</h4>
           <p className="text-tiny text-default-600">{description}</p>
-          <div className="flex flex-wrap gap-1 pt-1">
+          <div className="flex flex-wrap gap-1 pt-2">
             {tags.map(({ category, items }) =>
               items.length > 0
                 ? items.map((item) => (
