@@ -1,4 +1,5 @@
 import { SVGProps } from "react";
+import { IconType } from "react-icons";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
@@ -33,4 +34,9 @@ export type Entry = {
   location: string;
   timeframe: string;
   description: string[];
+};
+
+export type Skill = {
+  name: string;
+  icon: IconType;
 };

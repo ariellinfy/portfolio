@@ -1,12 +1,17 @@
+import { Metadata } from "next";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import NextImage from "next/image";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { GithubIcon, LinkedInIcon } from "@/components/icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/sites";
 import { josefin_sans } from "@/config/fonts";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Ariel Lin",
+};
 
 export default function Home() {
   const linkStyles =
@@ -18,11 +23,13 @@ export default function Home() {
         isBlurred
         className="border-none bg-background/60 dark:bg-default-100/50 min-w-[300px] w-full max-w-[950px] min-h-[475px]"
       >
-        <CardBody className="flex flex-row gap-8 items-center justify-center lg:justify-between p-10 md:px-15 lg:p-20 flex-wrap overflow-x-hidden">
-          <div className="flex flex-col gap-10">
+        <CardBody className="flex flex-row gap-8 lg:gap-14 items-center justify-center px-10 py-12 sm:py-20 md:px-15 lg:p-20 flex-wrap overflow-x-hidden">
+          <div className="flex flex-col gap-6 sm:gap-10">
             <div className="flex w-full items-center justify-center">
-              <h2 className={`text-5xl font-medium ${josefin_sans.className}`}>
-              👋 Hi, I'm Ariel Lin
+              <h2
+                className={`text-4xl sm:text-5xl font-medium ${josefin_sans.className}`}
+              >
+                👋 Hi, I'm Ariel Lin
               </h2>
             </div>
             <div className="flex flex-col gap-7">
@@ -33,7 +40,7 @@ export default function Home() {
                   color="primary"
                   variant="shadow"
                   size="lg"
-                  className="font-medium w-full shadow-md"
+                  className="text-sm sm:text-base px-3 sm:px-6 h-10 sm:h-12 font-medium w-full shadow-md"
                 >
                   Projects
                 </Button>
@@ -43,7 +50,7 @@ export default function Home() {
                   color="primary"
                   variant="shadow"
                   size="lg"
-                  className="font-medium w-full shadow-md"
+                  className="text-sm sm:text-base px-3 sm:px-6 h-10 sm:h-12 font-medium w-full shadow-md"
                 >
                   Resume
                 </Button>
@@ -58,7 +65,7 @@ export default function Home() {
                   href={siteConfig.links.github}
                   variant="shadow"
                 >
-                  <GithubIcon className={linkStyles} />
+                  <FaGithub className={linkStyles} size={26} />
                 </Button>
                 <Button
                   isIconOnly
@@ -69,7 +76,7 @@ export default function Home() {
                   href={siteConfig.links.linkedin}
                   variant="shadow"
                 >
-                  <LinkedInIcon className={linkStyles} />
+                  <FaLinkedin className={linkStyles} size={26} />
                 </Button>
                 <ThemeSwitch />
               </div>
@@ -78,7 +85,7 @@ export default function Home() {
           <div className="flex min-w-[200px] w-full max-w-[300px] justify-center items-center">
             <Image
               as={NextImage}
-              src="/avatar.jpeg"
+              src="/profile.jpg"
               alt="Profile Picture"
               className="object-cover w-full h-full"
               height={275}

@@ -124,7 +124,7 @@ export const projects: Project[] = [
       },
       {
         category: "backend",
-        items: ["Hugging Face", "OpenAI", "RESTful APIs"],
+        items: [],
       },
       { category: "database", items: [] },
       { category: "versionControl", items: [] },
@@ -222,7 +222,7 @@ export const projects: Project[] = [
         category: "frontend",
         items: ["React", "Redux", "Redux Sagas", "Sass", "Styled-components"],
       },
-      { category: "backend", items: [] },
+      { category: "backend", items: ["Stripe API"] },
       { category: "database", items: ["Firebase"] },
       { category: "versionControl", items: ["Git"] },
       { category: "devops", items: [] },

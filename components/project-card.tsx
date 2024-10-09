@@ -47,7 +47,7 @@ export const ProjectNarrowCard = ({
   if (!visible) return null;
 
   return (
-    <Card className="w-[420px] min-w-[300px] gap-2 p-3" isPressable isHoverable>
+    <Card className="w-[420px] min-w-[300px] gap-2 p-3 bg-slate-50 dark:bg-slate-800" isPressable isHoverable>
       <CardHeader className="justify-between items-start text-small p-0 gap-2">
         <Chip color={statusColorMap[status]} variant="dot" size="sm">
           {status}

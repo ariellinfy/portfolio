@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
-import { ProjectNarrowCard } from "@/components/project-card-narrow";
+import { ProjectNarrowCard } from "@/components/project-card";
 import { projects } from "@/config/projects";
 import { SearchIcon } from "@/components/icons";
 import { sortProjectsByTimeframe, filterProjects } from "@/lib/utils";
@@ -14,7 +14,7 @@ export const Projects = () => {
   const sortedProjects = sortProjectsByTimeframe(filteredProjects);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24 gap-12">
+    <div className="flex min-h-screen flex-col items-center justify-between p-8 sm:p-24 gap-5 sm:gap-10 min-w-[375px]">
       <div className="min-w-[300px] w-full max-w-[600px] text-white">
         <Input
           isClearable

@@ -6,14 +6,14 @@ export const experiences: Entry[] = [
     company: "Freelancer",
     location: "Calgary, AB",
     timeframe: "Jul 2024 - Present",
-    description: ["Coming soon..."],
+    description: ["Ongoing..."],
   },
   {
     title: "Tax Technology & Transformation Analyst",
     company: "Nutrien Ltd.",
     location: "Calgary, AB",
     timeframe: "Mar 2024 - Present",
-    description: ["Coming soon..."],
+    description: ["Ongoing..."],
   },
   {
     title: "Tax Technology & Transformation (Co-op)",

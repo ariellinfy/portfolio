@@ -1,8 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Ariel Lin | Portfolio",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Ariel Lin",
+  description:
+    "A full-stack developer's portfolio showcasing projects built with modern web technologies. Explore projects featuring responsive design, API integration, and scalable backend solutions.",
   navItems: [
     {
       label: "Projects",

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { useTheme } from "next-themes";
 import { useSwitch } from "@nextui-org/switch";
-import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
+import { TbSunFilled, TbMoonFilled } from "react-icons/tb";
 
 export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
@@ -53,14 +53,14 @@ export const ThemeSwitch = () => {
         })}
       >
         {!isSelected ? (
-          <SunFilledIcon
+          <TbSunFilled
             className="text-default-500 dark:hover:text-zinc-300 dark:hover:opacity-90"
-            size={24}
+            size={26}
           />
         ) : (
-          <MoonFilledIcon
+          <TbMoonFilled
             className="text-default-500 hover:opacity-80"
-            size={24}
+            size={26}
           />
         )}
       </div>
