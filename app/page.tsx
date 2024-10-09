@@ -85,7 +85,7 @@ export default function Home() {
           <div className="flex min-w-[200px] w-full max-w-[300px] justify-center items-center">
             <Image
               as={NextImage}
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Profile Picture"
               className="object-cover w-full h-full"
               height={275}
