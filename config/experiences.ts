@@ -21,9 +21,9 @@ export const experiences: Entry[] = [
     location: "Calgary, AB",
     timeframe: "Jan 2023 - Sep 2023",
     description: [
-      "Led the design and implementation of automation solutions using Excel, VBA, Power Query, and Power BI to elevate efficiency in tax reporting processes.",
-      "Engineered a user-friendly Power BI external tool, streamlining data model hierarchies and enhancing the overall tax reporting workflow.",
-      "Actively participated in the design, creation, and presentation of Ask-Me-Anything (AMA) session demos, contributing to improved team proficiency in essential tools.",
+      "Increased tax reporting efficiency by automating CSV exports and SAP EPM report refreshes using VBA, and optimized Power BI reports with time intelligence and hierarchy using Power Query and DAX to improve model validation and data visualization.",
+      "Streamlined Power BI workflows by automating hierarchy measures and enhancing data export features in Bravo (an open-source Power BI tool). Spearheaded the redesign of the frontend from TypeScript to React + TypeScript, maintained the C# backend, and created comprehensive documentation for both users and developers.",
+      "Improved team proficiency in tools like Excel, Power Query, and Power BI by researching tips, preparing examples, and presenting demos in Ask-Me-Anything (AMA) sessions, helping team members apply these tools in their daily tasks.",
     ],
   },
   {
@@ -32,10 +32,10 @@ export const experiences: Entry[] = [
     location: "Calgary, AB",
     timeframe: "Jun 2018 - Apr 2020",
     description: [
-      "Utilized MySQL to collect desired data; interpreted and analyzed results using Excel statistical packages.",
-      "Assessed financial performance and financial risks, prepared and analyzed financial statements and financial forecasts, reported to leadership team in monthly financial meetings.",
-      "Handled accounts receivable, accounts payables, payrolls, tax return filings and remittances.",
-      "Engaged and communicated with foreign patent firms for inbound and outbound patent applications.",
+      "Improved leadership decision-making by gathering and analyzing data with MySQL and Excel, providing insights on client preferences and areas for sales improvement.",
+      "Assessed financial performance by preparing financial statements, analyzing risks, and forecasting, and presented findings to leadership in monthly financial meetings.",
+      "Managed accounting functions including accounts receivable, accounts payable, payroll, and tax filings, ensuring accurate bookkeeping and compliance.",
+      "Contributed to revenue growth by engaging with foreign patent firms for inbound and outbound patent applications.",
     ],
   },
 ];
